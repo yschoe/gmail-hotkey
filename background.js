@@ -1,6 +1,6 @@
 chrome.commands.onCommand.addListener((command) => {
   if (command === "insert_text_1") {
-    insertText("This is predefined text 1");
+    insertText("No reply usually means no. Repeated reminders are considered unprofessional.");
   } else if (command === "insert_text_2") {
     insertText("This is predefined text 2");
   }

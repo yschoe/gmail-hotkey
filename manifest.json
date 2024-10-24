@@ -13,13 +13,13 @@
   "commands": {
     "insert_text_1": {
       "suggested_key": {
-        "default": "Ctrl+Shift+1"
+        "default": "Ctrl+Alt+z"
       },
       "description": "Insert predefined text 1"
     },
     "insert_text_2": {
       "suggested_key": {
-        "default": "Ctrl+Shift+2"
+        "default": "Ctrl+Alt+x"
       },
       "description": "Insert predefined text 2"
     }
