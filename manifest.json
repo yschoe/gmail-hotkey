@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Custom Hotkey Text Inserter",
+  "version": "1.0",
+  "description": "Define hotkeys to type text strings in the browser.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "insert_text_1": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+1"
+      },
+      "description": "Insert predefined text 1"
+    },
+    "insert_text_2": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+2"
+      },
+      "description": "Insert predefined text 2"
+    }
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
