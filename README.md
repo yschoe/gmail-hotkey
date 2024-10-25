@@ -7,21 +7,22 @@ The code was written using Claude. Initial attemps with ChatGPT and Gemini faile
 
 Here's the prompt I used:
 ```
-Write a chrome extension so that I can define custom macros to type predefined text strings using a hot key, say CTRL-ALT-, . Use manifest version 3.
+Write a chrome extension so that I can define custom macros to type 
+predefined text strings using a hot key, say CTRL-ALT-, . 
+Use manifest version 3.
+```
 
-
-...
-
-
+```
 I get this error: "Invalid value for 'commands[1].default': Ctrl+Alt+1.
 Could not load manifest."
-
-...
-
-When I do this in gmail compose, when it is used the first time, it copies my email  signature.
+```
 
 
 ```
+When I do this in gmail compose, when it is used the first time, it copies my email  signature.
+
+```
+
 ### How to install and use 
 
 1. Go to `chrome://extensions`
