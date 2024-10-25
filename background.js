@@ -31,20 +31,62 @@ chrome.commands.onCommand.addListener((command) => {
 
 
 // Function to be injected into the page
+
 function insertMacroText(text) {
   const activeElement = document.activeElement;
-  if (activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA' || activeElement.isContentEditable) {
+  
+  // Special handling for Gmail compose
+  if (window.location.hostname === 'mail.google.com' && activeElement.getAttribute('role') === 'textbox') {
+    const selection = window.getSelection();
+    const range = selection.getRangeAt(0);
+    
+    // Create a new text node with the macro text
+    const textNode = document.createTextNode(text);
+    
+    // Delete any selected text
+    range.deleteContents();
+    
+    // Insert the new text
+    range.insertNode(textNode);
+    
+    // Move the cursor to the end of the inserted text
+    range.setStartAfter(textNode);
+    range.setEndAfter(textNode);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    
+    return;
+  }
+  
+  // Handle regular input fields and textareas
+  if (activeElement.tagName === 'INPUT' || activeElement.tagName === 'TEXTAREA') {
     const start = activeElement.selectionStart;
     const end = activeElement.selectionEnd;
-    const value = activeElement.value || activeElement.innerText;
+    const value = activeElement.value;
     const newValue = value.substring(0, start) + text + value.substring(end);
-    
-    if (activeElement.isContentEditable) {
-      activeElement.innerText = newValue;
-    } else {
-      activeElement.value = newValue;
-    }
-    
+    activeElement.value = newValue;
     activeElement.selectionStart = activeElement.selectionEnd = start + text.length;
+    return;
+  }
+  
+  // Handle other contenteditable elements
+  if (activeElement.isContentEditable) {
+    const selection = window.getSelection();
+    const range = selection.getRangeAt(0);
+    
+    // Create a new text node with the macro text
+    const textNode = document.createTextNode(text);
+    
+    // Delete any selected text
+    range.deleteContents();
+    
+    // Insert the new text
+    range.insertNode(textNode);
+    
+    // Move the cursor to the end of the inserted text
+    range.setStartAfter(textNode);
+    range.setEndAfter(textNode);
+    selection.removeAllRanges();
+    selection.addRange(range);
   }
 }
