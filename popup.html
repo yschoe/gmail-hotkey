@@ -1,10 +1,30 @@
+
+// popup.html
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Hotkey Text Inserter</title>
-  </head>
-  <body>
-    <h1>Custom Hotkeys</h1>
-    <p>Use Ctrl+Shift+1 or Ctrl+Shift+2 to insert text!</p>
-  </body>
+<head>
+  <title>Text Macros</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+    }
+    .macro-entry {
+      margin-bottom: 10px;
+    }
+    input {
+      margin: 5px 0;
+    }
+    button {
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Text Macros</h2>
+  <div id="macroList"></div>
+  <button id="addMacro">Add New Macro</button>
+  <script src="popup.js"></script>
+</body>
 </html>
+

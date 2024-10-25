@@ -1,36 +1,29 @@
+// manifest.json
 {
   "manifest_version": 3,
-  "name": "Custom Hotkey Text Inserter",
+  "name": "Custom Text Macros",
   "version": "1.0",
-  "description": "Define hotkeys to type text strings in the browser.",
+  "description": "Define custom text macros with keyboard shortcuts",
   "permissions": [
+    "storage",
     "activeTab",
     "scripting"
   ],
+  "action": {
+    "default_popup": "popup.html"
+  },
   "background": {
     "service_worker": "background.js"
   },
   "commands": {
-    "insert_text_1": {
+    "trigger-macro": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Z"
+        "windows": "Ctrl+Shift+Comma",
+        "mac": "Command+Shift+Comma",
+        "chromeos": "Ctrl+Shift+Comma",
+        "linux": "Ctrl+Shift+Comma"
       },
-      "description": "Insert predefined text 1"
-    },
-    "insert_text_2": {
-      "suggested_key": {
-        "default": "Ctrl+Shift+A"
-      },
-      "description": "Insert predefined text 2"
+      "description": "Trigger macro selection"
     }
-  },
-  "action": {
-    "default_popup": "popup.html"
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
-    }
-  ]
+  }
 }
