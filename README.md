@@ -7,7 +7,7 @@ Chrome extension to define a shortcut key to insert a customizable text string i
    ![dev](img/dev.png)
 1. On the upper left corner, click on `( Load unpacked )`, then click on the folder where you've put these files.
    ![load](img/load.png)
-1. Go to `chrome://extensions/shortcuts;;;
+1. Go to `chrome://extensions/shortcuts`
 1. In the `Activate the extension` window, press `[Alt]+[Shift]+[,]`
    ![activate](img/activate.png)
 1. Go to gmail, open a compose windown then press `[Alt]+[Shift]+[,]`
