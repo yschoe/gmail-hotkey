@@ -26,7 +26,7 @@ The code was written using Claude. Initial attemps with ChatGPT and Gemini faile
 
 ### Known bugs
 
-1. Only tested in Linux. 
+1. Only tested in Linux. May not work in Windows.
 
 1. Need to activate when you switch to a different machine.
 
