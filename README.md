@@ -3,6 +3,8 @@
 
 Chrome extension to define a shortcut key to insert a customizable text string into the gmail compose window. 
 
+The code was written using Claude. Initial attemps with ChatGPT and Gemini failed. 
+
 ### How to install and use 
 
 1. Go to `chrome://extensions`
