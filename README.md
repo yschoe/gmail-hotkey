@@ -1,6 +1,9 @@
 # gmail-hotkey
 
+
 Chrome extension to define a shortcut key to insert a customizable text string into the gmail compose window. 
+
+### How to install and use 
 
 1. Go to `chrome://extensions`
 1. On the upper right corner, activate `Developer mode`
@@ -11,9 +14,18 @@ Chrome extension to define a shortcut key to insert a customizable text string i
 1. Go to `chrome://extensions/shortcuts`
 1. In the `Activate the extension` window, press `[Alt]+[Shift]+[,]`
    ![activate](img/activate.png)
-1. Go to gmail, open a compose windown then press `[Alt]+[Shift]+[,]`
+1. Go to gmail, open a compose window then press `[Alt]+[Shift]+[,]`
 1. Define your macro and `[Save]`.
 
    ![define](img/define.png)
 1. Go to the gmail compose window and press `[Ctrl]+[Shift]+[,]`
    ![example](img/example.png)
+
+
+### Known bugs
+
+1. Only tested in Linux. 
+
+1. Need to activate when you switch to a different machine.
+
+
