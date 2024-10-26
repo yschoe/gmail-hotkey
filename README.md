@@ -32,10 +32,10 @@ When I do this in gmail compose, when it is used the first time, it copies my em
 1. On the upper left corner, click on `( Load unpacked )`, then click on the folder where you've put these files.
    ![load](img/load.png)
 1. Go to `chrome://extensions/shortcuts`
-1. In the `Activate the extension` window, press `[Alt]+[Shift]+[,]`
+1. In the `Activate the extension` window, press `[Alt]+[Shift]+[,]` to activate.
    ![activate](img/activate.png)
 1. Go to gmail, open a compose window then press `[Alt]+[Shift]+[,]`
-1. Define your macro and `[Save]`.
+1. Click on `[Add New Macro]`, define your macro and `[Save]`.
 
    ![define](img/define.png)
 1. Go to the gmail compose window and press `[Ctrl]+[Shift]+[,]`
