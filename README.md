@@ -44,8 +44,6 @@ When I do this in gmail compose, when it is used the first time, it copies my em
 
 ### Known bugs
 
-1. Only tested in Linux. May not work in Windows.
-
 1. Need to activate when you switch to a different machine.
-
+1. Tested and works on Linux and Windows.
 
